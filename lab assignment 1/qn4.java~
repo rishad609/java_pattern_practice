@@ -1,0 +1,8 @@
+public class qn4{
+  public static void main(String[]args){
+    int base= 10;
+    int perpendicular=13;
+    int hypotenus= Math.sqrt(Math.pow(10)+Math.pow(13));
+    System.out.println("Diagonal distance="+hypotenus);
+    
+  }}

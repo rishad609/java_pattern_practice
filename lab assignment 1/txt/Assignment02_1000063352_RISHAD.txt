@@ -1,0 +1,165 @@
+//ANSWER1
+
+import java.util.*;
+public class qn1{
+  public static void main(String[]args){
+    Scanner scanner = new Scanner(System.in); 
+    System.out.println("Enter a number");
+    int num = scanner.nextInt();
+    if(num%5==0&&num%7!=0){
+      System.out.println("Divisible by 5 Only");
+    }
+    else if(num%7==0&&num%5!=0){
+      System.out.println("Divisible by 7 Only");
+    }
+    else if(num%7==0&&num%5==0){
+      System.out.println("Invalid:Divisible by Both");
+    }
+    else {System.out.println("NO");}      
+  }
+}
+
+//Answer 2
+
+import java.util.Scanner;
+
+public class q2{
+    public static void main(String[] stopped) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Age: ");
+        int age = scanner.nextInt();
+
+        System.out.print("Electricity Consumed: ");
+        double electricityConsumed = scanner.nextDouble();
+        double baseRate = 15.0;
+        double baseBill = electricityConsumed * baseRate;
+
+        double discountPercent = 0.0;
+        if (age < 18) {
+            discountPercent = 20.0;
+        } else if (age > 60) {
+            discountPercent = 10.0; 
+        } else {
+            discountPercent = 0.0;
+        }
+        double billAfterDiscount = baseBill * (1 - (discountPercent / 100.0));
+
+        if (electricityConsumed > 100) {
+            billAfterDiscount = billAfterDiscount * 1.05;
+        }
+
+        System.out.printf("Final Bill: %.1f Taka\n", billAfterDiscount);
+
+        scanner.close();
+    }
+}
+
+//Answer 3
+import java.util.Scanner;
+public class qn3{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    
+    float a = sc.nextFloat();
+    float b = sc.nextFloat();
+    float c = sc.nextFloat();
+    
+    float max = a;
+    if (b > max) max = b;
+    if (c > max) max = c;
+
+    float min = a;
+    if (b < min) min = b;
+    if (c < min) min = c;
+    
+    
+    
+    System.out.println("Maximum number is " + max);
+        System.out.println("Minimum number is " + min);
+
+        scanner.close();
+    }
+}
+
+
+//ANSWER4
+
+import java.util.Scanner;
+
+public class qn4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        if (a == b && b == c) {
+            System.out.println("This is a Equilateral triangle");
+        } else if (a == b || b == c || a == c) {
+            System.out.println("This is a Isosceles triangle");
+        } else {
+            System.out.println("This is a Scalene triangle");
+        }
+    }
+}
+
+
+//Answe 5
+import java.util.Scanner;
+
+public class Question5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the amount the customer need to pay(Taka)");
+        int bill = sc.nextInt();
+        System.out.println("Enter the amount, customer gave(Taka)");
+        int given = sc.nextInt();
+
+        if (given < bill) {
+            System.out.println("Please pay " + (bill - given) + " taka more.");
+        } else {
+            int change = given - bill;
+            System.out.println("The returned amount is " + change + " taka.");
+            if (change > 0) {
+                System.out.println("100 taka note: " + change / 100);
+                change %= 100;
+                System.out.println("50 taka note: " + change / 50);
+                change %= 50;
+                System.out.println("20 taka note: " + change / 20);
+                change %= 20;
+                System.out.println("10 taka note: " + change / 10);
+                change %= 10;
+                System.out.println("5 taka coin: " + change / 5);
+                change %= 5;
+                System.out.println("2 taka coin: " + change / 2);
+                change %= 2;
+                System.out.println("1 taka coin: " + change);
+            }
+        }
+    }
+}
+
+
+//ANSWER 6
+import java.util.Scanner;
+
+public class Question6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input the 1st number: ");
+        int a = sc.nextInt();
+        System.out.print("Input the 2nd number: ");
+        int b = sc.nextInt();
+        System.out.print("Input the 3rd number: ");
+        int c = sc.nextInt();
+
+        if (a == b && b == c) {
+            System.out.println("All numbers are equal");
+        } else if (a != b && b != c && a != c) {
+            System.out.println("All numbers are different");
+        } else {
+            System.out.println("Neither all are equal or different");
+        }
+    }
+}
+

@@ -1,0 +1,34 @@
+//Answer 2
+
+import java.util.Scanner;
+
+public class q2{
+    public static void main(String[] stopped) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Age: ");
+        int age = scanner.nextInt();
+
+        System.out.print("Electricity Consumed: ");
+        double electricityConsumed = scanner.nextDouble();
+        double baseRate = 15.0;
+        double baseBill = electricityConsumed * baseRate;
+
+        double discountPercent = 0.0;
+        if (age < 18) {
+            discountPercent = 20.0;
+        } else if (age > 60) {
+            discountPercent = 10.0; 
+        } else {
+            discountPercent = 0.0;
+        }
+        double billAfterDiscount = baseBill * (1 - (discountPercent / 100.0));
+
+        if (electricityConsumed > 100) {
+            billAfterDiscount = billAfterDiscount * 1.05;
+        }
+
+        System.out.printf("Final Bill: %.1f Taka\n", billAfterDiscount);
+
+        scanner.close();
+    }
+}

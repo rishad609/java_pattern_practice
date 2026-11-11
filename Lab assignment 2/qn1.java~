@@ -1,0 +1,9 @@
+import java.util.Scanner
+public class qn1{
+  public static void main(Strings[]args){
+    system.out.println{"Enter a number"};
+    int num1 = scanner.nextInt();
+    
+    
+  }
+}
